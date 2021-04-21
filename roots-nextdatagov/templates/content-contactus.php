@@ -12,34 +12,34 @@
 
         </div>
 
-        <div class="row contact-nav">
-
-            <ul class="nav">
-                <li class="col-md-4">
-                    <a href="#question">
+        <section class="row">
+            <div class="col-md-12">
+                <a name="question" class="contact-heading">
+                    <h1 class="icon-heading">
                         <i class="fa fa-comments-o"></i>
-                        <span>Ask a question</span>
-                    </a>
-                </li>
+                        <span>
+                            Ask a Question
+                        </span>
+                    </h1>
+                </a>
 
-                <li class="col-md-4">
-                    <a href="#request">
-                        <i class="fa fa-lightbulb-o"></i>
-                        <span>Make a Request</span>
-                    </a>
-                </li>
-
-                <li class="col-md-4">
-                    <a href="#report">
-                        <i class="fa fa-exclamation-circle"></i>
-                        <span>Report a Problem</span>
-                    </a>
-                </li>
-            </ul>
-
-        </div>
-
-
+                <div>
+                    <div>
+                        You can use this form to contact the data.gov team or feel free to email us directly at
+                        <a href='mailto:datagov@gsa.gov'>datagov@gsa.gov</a>
+                    </div>
+                    <div id="contact-us-form">
+                        <?php
+                        while (have_posts()) {
+                            the_post();
+                            the_content();
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <div class="row">
 
             <section class="col-md-8">
@@ -108,35 +108,7 @@
                 </div>
             </section>
         </div>
-
-
-        <section class="row">
-            <div class="col-md-12">
-                <a name="question" class="contact-heading">
-                    <h1 class="icon-heading">
-                        <i class="fa fa-comments-o"></i>
-                        <span>
-                            Ask a Question
-                        </span>
-                    </h1>
-                </a>
-
-                <div>
-                    <div>
-                        You can use this form to contact the data.gov team or feel free to email us directly at
-                        <a href='mailto:datagov@gsa.gov'>datagov@gsa.gov</a>
-                    </div>
-                    <div id="contact-us-form">
-                        <?php
-                        while (have_posts()) {
-                            the_post();
-                            the_content();
-                        }
-                        ?>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
 
         <section class="row">
             <div class="col-md-12">
@@ -144,7 +116,7 @@
                     <h1 class="icon-heading">
                         <i class="fa fa-lightbulb-o"></i>
                         <span>
-                            Make a Request
+                            Make a Request or Report a Problem
                         </span>
                     </h1>
                 </a>
@@ -162,34 +134,6 @@
                 </li>
 
                 <li class="col-md-6">
-                    <a href="/request">
-                        <i class="fa fa-check-circle-o"></i>
-                        <span>
-                            Request new data
-                        </span>
-                    </a>
-                </li>
-
-            </ul>
-
-
-        </section>
-
-        <section class="row">
-
-            <div class="col-md-12">
-                <a name="report" class="contact-heading">
-                    <h1 class="icon-heading">
-                        <i class="fa fa-exclamation-circle"></i>
-                            <span>
-                                Report a Problem
-                            </span>
-                    </h1>
-                </a>
-            </div>
-
-            <ul class="nav contact-link">
-                <li class="col-md-6">
                     <a href="https://github.com/GSA/data.gov/blob/master/CONTRIBUTING.md#ways-to-contribute">
                         <i class="fa fa-github"></i>
                             <span>
@@ -197,15 +141,10 @@
                             </span>
                     </a>
                 </li>
-                <li class="col-md-6">
-                    <a href="/issue">
-                        <i class="fa fa-exclamation-circle"></i>
-                            <span>
-                                Report a problem with a dataset
-                            </span>
-                    </a>
-                </li>
+
+
             </ul>
+
 
         </section>
     </div>

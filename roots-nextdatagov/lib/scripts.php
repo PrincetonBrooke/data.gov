@@ -14,7 +14,7 @@ function roots_scripts() {
 	wp_enqueue_style('datagov-googlefonts', '//fonts.googleapis.com/css?family=Abel|Lato:100,300,400,700' );
 	//wp_enqueue_style('fontawesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
 
-	wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, 'd4d209028267e6bfd84bc8a7aeb90f98');
+	wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, '22da64184e7242c899b4293d061bea79');
 	wp_enqueue_style('rei_css', get_template_directory_uri() . '/assets/css/rei.css', false, '' );
 
 
@@ -35,9 +35,10 @@ function roots_scripts() {
 	wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.7.1.min.js', false, null, false );
 	wp_register_script('sticky', get_template_directory_uri() . '/assets/js/vendor/jquery.sticky.js', false, null, false );
 	wp_register_script('roots_scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', false, '9ab03eaa29bcfa40a4e8e34e7afda278', true );
-    wp_register_script( 'datatables', 'https://cdn.datatables.net/1.10.8/js/jquery.dataTables.min.js', false, null, false );
-    wp_register_script( 'fixedcolumns', 'https://cdn.datatables.net/fixedcolumns/3.1.0/js/dataTables.fixedColumns.min.js', false, null, false );
-    wp_register_script( 'scroller', 'https://cdn.datatables.net/scroller/1.3.0/js/dataTables.scroller.min.js', false, null, false );
+    //wp_register_script( 'datatables', 'https://cdn.datatables.net/1.10.8/js/jquery.dataTables.min.js', false, null, false );
+    //wp_register_script( 'fixedcolumns', 'https://cdn.datatables.net/fixedcolumns/3.1.0/js/dataTables.fixedColumns.min.js', false, null, false );
+    //wp_register_script( 'scroller', 'https://cdn.datatables.net/scroller/1.3.0/js/dataTables.scroller.min.js', false, null, false );
+    wp_register_script( 'datatables', 'https://cdn.datatables.net/v/dt/fc-3.2.3/sc-1.4.3/datatables.min.js', false, null, false );
 
 
 
@@ -45,8 +46,8 @@ function roots_scripts() {
 	wp_enqueue_script('modernizr' );
 	wp_enqueue_script('jquery' );
     wp_enqueue_script('datatables' );
-    wp_enqueue_script('fixedcolumns' );
-    wp_enqueue_script('scroller' );
+    //wp_enqueue_script('fixedcolumns' );
+    //wp_enqueue_script('scroller' );
 	// wp_enqueue_script( 'sticky' );
 	wp_enqueue_script('roots_scripts' );
 	wp_enqueue_script('ext_link_handler', get_template_directory_uri() . '/assets/js/ext-link-handler.js', array(
@@ -57,7 +58,7 @@ function roots_scripts() {
 //        'jquery',
 //        'wpp-frontend'
 //    ), '' );
-	wp_enqueue_script('Federated-Analytics', 'https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA', false, null );
+	wp_enqueue_script('Federated-Analytics', 'https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA&subagency=TTS', false, null );
 //	wp_enqueue_script('cycle_all', get_template_directory_uri() . '/assets/js/jquery.cycle.all.js', array( 'jquery' ), '' );
 }
 
